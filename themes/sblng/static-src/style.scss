@@ -1,0 +1,22 @@
+#global-footer .footer-container p.copyright {
+    color: #acacac;
+    font-size: 12px;
+    letter-spacing: .03em;
+}
+
+@media screen and (max-width: 768px) {
+    #global-footer .footer-container p.copyright {
+        margin-top: 38px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+	#global-footer .footer-container p.copyright {
+	margin-top: 7px;
+	margin-left: auto;
+    }
+}
+
+#global-footer {
+    background-color: ;
+}
