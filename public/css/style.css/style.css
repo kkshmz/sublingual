@@ -1,0 +1,222 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+#global-footer .footer-container p.copyright {
+  color: #acacac;
+  font-size: 12px;
+  letter-spacing: .03em; }
+
+@media screen and (max-width: 768px) {
+  #global-footer .footer-container p.copyright {
+    margin-top: 38px; } }
+
+@media screen and (min-width: 769px) {
+  #global-footer .footer-container p.copyright {
+    margin-top: 7px;
+    margin-left: auto; } }
+
+#global-footer {
+  background-color: #000; }
+
+.global-container {
+  background: transparent;
+  border: 30px solid #fff;
+  border-bottom: 0;
+  text-align: center; }
+
+@media (max-width: 767px) {
+  .global-container {
+    border: 0px; } }
+
+/*HEADER*/
+.global-header {
+  background: transparent;
+  font-size: 22px;
+  height: 30px;
+  overflow: hidden !important;
+  position: relative;
+  text-align: center;
+  border-bottom: 0; }
+
+.header h1 {
+  font-size: 130px;
+  line-height: 100%;
+  margin: 0px 0px 20px 0px; }
+
+.global-container .global-header #header-bg {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url(/img/mountains.jpg) no-repeat center center fixed;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  height: 700px;
+  width: 100%;
+  z-index: -1; }
+
+.insta-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 1;
+  justify-content: space-around;
+  margin: 0 auto 24px;
+  max-width: 965px;
+  min-height: 100px;
+  position: relative; }
+
+.insta-item {
+  animation: slide-item .3s ease forwards;
+  box-sizing: border-box;
+  flex: 1 0 33%;
+  transform: translateY(250px);
+  visibility: hidden; }
+  .insta-item:nth-child(1) {
+    animation-delay: 0.1s; }
+  .insta-item:nth-child(2) {
+    animation-delay: 0.2s; }
+  .insta-item:nth-child(3) {
+    animation-delay: 0.3s; }
+  .insta-item:nth-child(4) {
+    animation-delay: 0.4s; }
+  .insta-item:nth-child(5) {
+    animation-delay: 0.5s; }
+  .insta-item:nth-child(6) {
+    animation-delay: 0.6s; }
+  .insta-item:nth-child(7) {
+    animation-delay: 0.7s; }
+  .insta-item:nth-child(8) {
+    animation-delay: 0.8s; }
+  .insta-item:nth-child(9) {
+    animation-delay: 0.9s; }
+  .insta-item:nth-child(10) {
+    animation-delay: 1s; }
