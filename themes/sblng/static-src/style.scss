@@ -1,182 +1,235 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/*! normalize.css v1.0.1 | MIT License | git.io/normalize */
 
-*,
-*:after,
-*::before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'regular';
-    src: url("  ../../fonts/calibre/Calibre-Regular.eot");
-    src: url("../../fonts/calibre/Calibre-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/calibre/Calibre-Regular.woff") format("woff"), url("../../fonts/calibre/Calibre-Regular.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal
-}
-
-@font-face {
-    font-family: 'bold';
-    src: url("../../fonts/calibre/Calibre-Semibold.ttf");
-    src: url("../../fonts/calibre/Calibre-Semibold.woff") format("woff"), url("../../fonts/calibre/Calibre-Semibold.woff2") format("woff2");
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal
-}
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
 article,
 aside,
-canvas,
 details,
-embed,
-figure,
 figcaption,
+figure,
 footer,
 header,
 hgroup,
-menu,
 nav,
-output,
-ruby,
 section,
-summary,
-time,
-mark,
+summary {
+    display: block
+}
 audio,
+canvas,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
 }
-
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+[hidden] {
+    display: none
+}
 html {
-    font-size: 75%;
-    font-family: 'regular', sans-serif;
-    font-weight: normal;
-    font-style: normal
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
 }
-
-
-/* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block;
+html,
+button,
+input,
+select,
+textarea {
+    font-family: sans-serif
 }
-
 body {
-    line-height: 1;
+    margin: 0
 }
-
+a:focus {
+    outline: thin dotted
+}
+a:active,
+a:hover {
+    outline: 0
+}
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+h2 {
+    font-size: 1.5em;
+    margin: .83em 0
+}
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0
+}
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0
+}
+h5 {
+    font-size: .83em;
+    margin: 1.67em 0
+}
+h6 {
+    font-size: .75em;
+    margin: 2.33em 0
+}
+abbr[title] {
+    border-bottom: 1px dotted
+}
+b,
+strong {
+    font-weight: bold
+}
+blockquote {
+    margin: 1em 40px
+}
+dfn {
+    font-style: italic
+}
+mark {
+    background: #ff0;
+    color: #000
+}
+p,
+pre {
+    margin: 1em 0
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em
+}
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word
+}
+q {
+    quotes: none
+}
+q:before,
+q:after {
+    content: '';
+    content: none
+}
+small {
+    font-size: 80%
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+sup {
+    top: -0.5em
+}
+sub {
+    bottom: -0.25em
+}
+dl,
+menu,
 ol,
 ul {
+    margin: 1em 0
+}
+dd {
+    margin: 0 0 0 40px
+}
+menu,
+ol,
+ul {
+    padding: 0 0 0 40px
+}
+nav ul,
+nav ol {
     list-style: none;
+    list-style-image: none
 }
-
-blockquote,
-q {
-    quotes: none;
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic
 }
-
-blockquote {
-    &:before,
-    &:after {
-        content: '';
-        content: none;
-    }
+svg:not(:root) {
+    overflow: hidden
 }
-
-q {
-    &:before,
-    &:after {
-        content: '';
-        content: none;
-    }
+figure {
+    margin: 0
 }
-
+form {
+    margin: 0
+}
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: .35em .625em .75em
+}
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal;
+    *margin-left: -7px
+}
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle
+}
+button,
+input {
+    line-height: normal
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    *overflow: visible
+}
+button[disabled],
+input[disabled] {
+    cursor: default
+}
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+    *height: 13px;
+    *width: 13px
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+textarea {
+    overflow: auto;
+    vertical-align: top
+}
 table {
     border-collapse: collapse;
-    border-spacing: 0;
+    border-spacing: 0
 }
-
+/*END of normalize*/
 body {
     font-family: 'regular', sans-serif;
     font-weight: normal;
@@ -184,10 +237,9 @@ body {
     font-size: 1rem;
     color: #000
 }
-
 p,
 ul,
-ol {
+f ol {
     margin: 0 0 1.5rem 0;
     font-size: 2rem;
     line-height: 2.25rem;
@@ -195,7 +247,6 @@ ol {
     font-weight: normal;
     font-style: normal
 }
-
 @media only screen and (max-width: 1024px) {
     p,
     ul,
@@ -204,18 +255,15 @@ ol {
         line-height: 2rem
     }
 }
-
 ul,
 ol {
     margin: 2rem 0 1.5rem 0;
     padding-left: 1.25rem
 }
-
 ul li,
 ol li {
     margin-bottom: 1rem
 }
-
 h1 {
     font-family: 'bold', sans-serif;
     font-weight: normal;
@@ -225,7 +273,6 @@ h1 {
     margin: 0;
     letter-spacing: -1px
 }
-
 @media only screen and (min-width: 2000px) {
     h1 {
         font-size: 8rem;
@@ -233,7 +280,6 @@ h1 {
         letter-spacing: -2px
     }
 }
-
 @media only screen and (max-width: 1440px) {
     h1 {
         font-size: 6rem;
@@ -241,14 +287,12 @@ h1 {
         letter-spacing: -1px
     }
 }
-
 @media only screen and (max-width: 1024px) {
     h1 {
         font-size: 4rem;
         line-height: 4rem
     }
 }
-
 @media only screen and (max-width: 767px) {
     h1 {
         font-size: 3rem;
@@ -256,13 +300,11 @@ h1 {
         margin: 0
     }
 }
-
 @media only screen and (max-width: 767px) {
     h1 br {
         display: none
     }
 }
-
 h2 {
     font-family: 'bold', sans-serif;
     font-weight: normal;
@@ -272,28 +314,24 @@ h2 {
     line-height: 4rem;
     margin: 0
 }
-
 @media only screen and (max-width: 1440px) {
     h2 {
         font-size: 3.5rem;
         line-height: 3.5rem
     }
 }
-
 @media only screen and (max-width: 1024px) {
     h2 {
         font-size: 3rem;
         line-height: 3rem
     }
 }
-
 @media only screen and (max-width: 1024px) {
     h2 {
         font-size: 2.5rem;
         line-height: 2.5rem
     }
 }
-
 h3 {
     font-family: 'regular', sans-serif;
     font-weight: normal;
@@ -303,24 +341,47 @@ h3 {
     line-height: 1.75rem;
     margin: 0 0 4rem 0
 }
-
 h3.no-margin {
     margin: 0
 }
-
 @media only screen and (max-width: 767px) {
     h3.no-margin {
         margin: 0 0 3rem 0
     }
 }
-
 @media only screen and (max-width: 767px) {
     h3 {
         margin: 0 0 2rem 0
     }
 }
-
-$insta-wrapper-max-width: 965px;
+@font-face {
+    font-family: 'regular';
+    src: url("../fonts/calibre/CalibreWeb-Regular.eot");
+    src: url("../fonts/calibre/CalibreWeb-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/calibre/CalibreWeb-Regular.woff") format("woff"), url("../fonts/calibre/CalibreWeb-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal
+}
+@font-face {
+    font-family: 'bold';
+    src: url("../fonts/calibre/CalibreWeb-Semibold.ttf");
+    src: url("../fonts/calibre/CalibreWeb-Semibold.woff") format("woff"), url("../fonts/calibre/CalibreWeb-Semibold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal
+}
+body {
+    font-family: 'regular', sans - serif;
+    font-weight: normal;
+    font-style: normal
+}
+html {
+    font-size: 75%;
+    font-family: 'regular', sans - serif;
+    font-weight: normal;
+    font-style: normal
+}
+$insta-wrapper-max-width: 1200px;
 $insta-wrapper-min-height: 100px;
 $transition: all .17s cubic-bezier(.4,
 0,
@@ -331,46 +392,39 @@ $transition: all .17s cubic-bezier(.4,
     font-size: 12px;
     letter-spacing: .03em;
 }
-
 @media screen and (max-width: 768px) {
     #global-footer .footer-container p.copyright {
         margin-top: 38px;
     }
 }
-
 @media screen and (min-width: 769px) {
     #global-footer .footer-container p.copyright {
         margin-top: 7px;
         margin-left: auto;
     }
 }
-
 #global-footer {
     background-color: #000;
 }
-
 .global-container {
     background: transparent;
     border: 30px solid #fff;
     border-bottom: 0;
 }
-
 @media (max-width: 767px) {
     .global-container {
         border: 0px;
     }
 }
-
-
 /*HEADER*/
-.header .fixed{
+
+.header .fixed {
     bottom: auto;
     left: 0px;
     position: fixed;
     top: 0px;
     z-index: 10000000;
 }
-
 .global-header {
     background: transparent;
     font-size: 22px;
@@ -386,7 +440,6 @@ $transition: all .17s cubic-bezier(.4,
     -o-animation-delay: 1s;
     animation-delay: 1s;
 }
-
 .global-header .nav-bar {
     background-color: #fff;
     font-family: "DINPro-Cond-Medium", Helvetica, Arial, sans-serif;
@@ -397,30 +450,25 @@ $transition: all .17s cubic-bezier(.4,
     left: 0px;
     width: 100%;
 }
-
 .global-header .nav-bar ol {
     height: 60px;
 }
-
 .global-header .nav-bar ol li {
     margin: 0px;
     padding: 0px;
     font-size: 18px;
     display: inline-block;
 }
-
 .global-header .nav-bar ol li a {
     display: block;
     line-height: 60px;
     padding: 0 30px;
 }
-
 .header h1 {
     font-size: 130px;
     line-height: 100%;
     margin: 0px 0px 20px 0px;
 }
-
 .global-container .global-header #header-bg {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -435,7 +483,6 @@ $transition: all .17s cubic-bezier(.4,
     width: 100%;
     z-index: -1;
 }
-
 .gradient-wrap {
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bebebe), color-stop(50%, #ffffff), color-stop(100%, #ffffff));
     background-image: -webkit-linear-gradient(#bebebe, #ffffff 50%, #ffffff);
@@ -443,7 +490,6 @@ $transition: all .17s cubic-bezier(.4,
     background-image: -o-linear-gradient(#bebebe, #ffffff 50%, #ffffff);
     /* background-image: linear-gradient(#bebebe,#ffffff 50%,#ffffff); */
 }
-
 .insta-wrapper {
     box-sizing: border-box;
     display: flex;
@@ -455,20 +501,24 @@ $transition: all .17s cubic-bezier(.4,
     min-height: $insta-wrapper-min-height;
     position: relative;
 }
-
 .insta-item {
     animation: slide-item .3s ease forwards;
     box-sizing: border-box;
     flex: 1 0 33%;
     transform: translateY(250px);
-    visibility: hidden;
-    @for $i from 1 through 10 {
-        &:nth-child(#{$i}) {
-            animation-delay: (#{$i * .1s});
+    z-index: 2;
+    /*@for $i from 1 through 10 {
+        &:nth-child(# {
+            $i
         }
-    }
+        ) {
+            animation-delay: (# {
+                $i * .1s
+            }
+            );
+        }
+    }*/
 }
-
 .wrap {
     margin-left: auto;
     margin-right: auto;
@@ -478,7 +528,16 @@ $transition: all .17s cubic-bezier(.4,
     position: relative;
     padding: 6rem 0;
 }
-
+@media only screen and(max - width: 1440 px) {
+    .wrap {
+        width: 90%;
+    }
+}
+@media only screen and(max - width: 767 px) {
+    .wrap {
+        width: 90%;
+    }
+}
 .global-container .wrap h3 {
     font-family: 'regular', sans-serif;
     font-weight: normal;
@@ -488,13 +547,11 @@ $transition: all .17s cubic-bezier(.4,
     line-height: 1.75rem;
     margin: 0 0 4rem 0;
 }
-
 .global-container .wrap h2.sec-title {
     position: relative;
     display: inline;
     left: 6rem;
 }
-
 h2 {
     font-family: 'bold', sans-serif;
     font-weight: normal;
@@ -504,18 +561,7 @@ h2 {
     line-height: 4rem;
     margin: 0;
 }
-
-.wrap .dual-col .col-2 {
-    width: 45%;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.wrap .dual-col .col-2:first-of-type {
-    margin-right: 5%;
-}
-
-.col-2 p {
+.col-1 p {
     max-width: 40rem;
     margin: 3rem 0 6rem;
     font-size: 2rem;
@@ -524,9 +570,38 @@ h2 {
     font-weight: normal;
     font-style: normal;
 }
-
-
 /*about*/
+/*News*/
+
+/*.global-container section.news-insta {
+    background: green;
+}*/
+/*contact*/
+
+.global-container section.contact {
+    background-color: yellow;
+}
+/*FOOTER*/
+
+.gmap-wrapper {
+    position: relative;
+    margin: 150px 0px 20px 0px;
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+    display: block;
+}
+.global-footer {
+    padding: 8rem 0 6rem;
+    background: #ffdd30;
+}
+.footer p {
+    margin: 0;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+}
+/*COLUMNS*/
+/*substitute of columns*/
 
 .dual-col {
     padding: 0 6rem;
@@ -546,41 +621,31 @@ h2 {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
-
-.dual-col .col-2 {
+.dual-col .col-1 {
     width: 45%;
     margin: 0;
     position: relative;
     padding: 4rem 0;
 }
-/*News*/
-.global-container section.news-insta {
-    background: green;
+.dual-col .col-1 .h2 {
+    padding-left: 0;
 }
-
-/*contact*/
-.global-container section.contact {
-    background-color: yellow;
+.wrap .dual-col .col-1 {
+    width: 45%;
+    padding-top: 0;
+    padding-bottom: 0;
 }
-
-/*FOOTER*/
-
-.gmap-wrapper {
-    position: relative;
-    margin: 150px 0px 20px 0px;
-    overflow: hidden;
-    height: 500px;
-    width: 100%;
-    display: block;
+.wrap .dual-col .col:first-of-type {
+    margin-right: 5%;
 }
+/*ONE COLUMN*/
 
-.global-footer {
-    padding: 8rem 0 6rem;
-    background: #ffdd30;
-}
-
-.footer p {
-    margin: 0;
-    font-size: 1.75rem;
-    line-height: 1.75rem;
+.col-1 p {
+    max-width: 40rem;
+    margin: 3rem 0 6rem;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    font-family: 'regular', sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }

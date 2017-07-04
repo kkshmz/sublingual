@@ -72094,48 +72094,30 @@ function extend() {
 }
 
 },{}],373:[function(require,module,exports){
-
 var Instafeed = require("instafeed.js");
-var GoogleMapsAPI = require("googlemaps");
-var Waypoint = require("../node_modules/waypoints/lib/noframework.waypoints.js");
-
+var gm = require('googlemaps');
+var Waypoint = require('waypoints/lib/noframework.waypoints.js');
+// var Waypoint = require("../../node_modules/waypoints/lib/noframework.waypoints.js");
 
 var loadButton = document.getElementById('insta-btn');
 var feed = new Instafeed({
-		target: 'instafeed',
+        target: 'instafeed',
         get: 'user',
         userId: '2952085850',
         accessToken: '2952085850.1677ed0.f8f9a9502a73462286e96148fb03df71',
         sortBy: 'most-recent',
+        limit: '6',
         links: 'true',
         resolution: 'standard_resolution',
-        template: '<div class="insta-item">' + '<a class="lazyload" href="{{link}}">' + '<img src= "{{image}}" style="width:480px; height:480px;">' + '</a>' + '</div>',
+        template: '<div class="insta-item">' + '<a class="lazyload" href="{{link}}">' + '<img src="{{image}}">' + '</a>' + '</div>', 
         filter: function(image) {
             return image.type === 'image';
         },
-        //every time we load more, run this function
-        after: function() {
-            loader.style.display = 'none';
-            if (!this.hasNext()) {
-                loadButton.setAttribute('disabled', 'disabled');
-            }
-        }
     })
-    //bind the load more button,
-loadButton.addEventListener('click', function() {
-    feed.next();
-});
-//run the feed
+    //run the feed
 feed.run();
 
-// googleMapsClient.createClient({
-//     key: ''
-// })
-
-
-// key: 'AIzaSyD2-PfxBnXkBINYrhu5XEDmBggbOon70Mw'
-
-var sticky = new Waypoint.Sticky({
+var sticky = new Waypoint({
     element: $('.nav-bar')[0],
     handler: function(direction) {
         if (direction == 'down') {
@@ -72147,4 +72129,25 @@ var sticky = new Waypoint.Sticky({
     }
 })
 
-},{"../node_modules/waypoints/lib/noframework.waypoints.js":371,"googlemaps":146,"instafeed.js":196}]},{},[373]);
+
+
+
+// googleMapsClient.createClient({
+//     key: ''
+// })
+// GoogleMapsLoader.KEY = 'AIzaSyD2-PfxBnXkBINYrhu5XEDmBggbOon70Mw';
+
+// key: 'AIzaSyD2-PfxBnXkBINYrhu5XEDmBggbOon70Mw'
+
+// var gmAPI = new GoogleMapsAPI();
+// z
+// var googleMapsClient = require('@google/maps').createClient({
+// 	key:'AIzaSyD2-PfxBnXkBINYrhu5XEDmBggbOon70Mw'
+// })
+// googleMapsClient.geocode({
+// 	address: ''
+// })
+
+
+// 35.6687251,139.6526166,
+},{"googlemaps":146,"instafeed.js":196,"waypoints/lib/noframework.waypoints.js":371}]},{},[373]);
