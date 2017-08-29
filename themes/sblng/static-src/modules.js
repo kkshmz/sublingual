@@ -1,7 +1,8 @@
 var Instafeed = require("instafeed.js");
 var gm = require('googlemaps');
-var Waypoint = require('waypoints/lib/noframework.waypoints.js');
+var Waypoint = require('waypoints');
 // var Waypoint = require("../../node_modules/waypoints/lib/noframework.waypoints.js");
+
 
 var loadButton = document.getElementById('insta-btn');
 var feed = new Instafeed({
@@ -21,10 +22,11 @@ var feed = new Instafeed({
     //run the feed
 feed.run();
 
-var sticky = new Waypoint({
-    element: $('.nav-bar')[0],
+var sticky = new Waypoint.Sticky({
+    element: document.getElementById('.nav-bar'),
     handler: function(direction) {
         if (direction == 'down') {
+            alert('You have scrolled to a thing');
             $("fixed").toggleClass;
         } else if (direction == 'up') {
             $("fixed").removeClass;
@@ -32,7 +34,6 @@ var sticky = new Waypoint({
 
     }
 })
-
 
 
 

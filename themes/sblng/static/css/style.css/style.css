@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'CalibreRegular';
+  src: url("../../fonts/calibre/CalibreWeb-Regular.eot");
+  src: url("../../fonts/calibre/CalibreWeb-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/calibre/CalibreWeb-Regular.woff") format("woff"), url("../fonts/calibre/CalibreWeb-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-family: 'calibre';
+  src: url("../../fonts/calibre/CalibreWeb-Semibold.ttf");
+  src: url("../fonts/calibre/CalibreWeb-Semibold.woff") format("woff"), url("../fonts/calibre/CalibreWeb-Semibold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
 /*! normalize.css v1.0.1 | MIT License | git.io/normalize */
 article,
 aside,
@@ -28,6 +44,7 @@ audio:not([controls]) {
 
 html {
   font-size: 100%;
+  font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -142,6 +159,7 @@ dd {
 menu,
 ol,
 ul {
+  list-style: none;
   padding: 0 0 0 40px; }
 
 nav ul,
@@ -230,7 +248,7 @@ table {
 
 /*END of normalize*/
 body {
-  font-family: 'regular', sans-serif;
+  font-family: '', sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
@@ -242,7 +260,7 @@ f ol {
   margin: 0 0 1.5rem 0;
   font-size: 2rem;
   line-height: 2.25rem;
-  font-family: 'regular', sans-serif;
+  font-family: 'CalibreRegular', sans-serif;
   font-weight: normal;
   font-style: normal; }
 
@@ -323,7 +341,7 @@ h2 {
     line-height: 2.5rem; } }
 
 h3 {
-  font-family: 'regular', sans-serif;
+  font-family: 'CalibreRegular', sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #000;
@@ -342,24 +360,8 @@ h3.no-margin {
   h3 {
     margin: 0 0 2rem 0; } }
 
-@font-face {
-  font-family: 'regular';
-  src: url("../fonts/calibre/CalibreWeb-Regular.eot");
-  src: url("../fonts/calibre/CalibreWeb-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/calibre/CalibreWeb-Regular.woff") format("woff"), url("../fonts/calibre/CalibreWeb-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal; }
-
-@font-face {
-  font-family: 'bold';
-  src: url("../fonts/calibre/CalibreWeb-Semibold.ttf");
-  src: url("../fonts/calibre/CalibreWeb-Semibold.woff") format("woff"), url("../fonts/calibre/CalibreWeb-Semibold.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal; }
-
 body {
-  font-family: "regular", sans-serif;
+  font-family: "CalibreRegular", sans-serif;
   font-weight: normal;
   font-style: normal; }
 
@@ -396,7 +398,7 @@ html {
     border: 0px; } }
 
 /*HEADER*/
-.header .fixed {
+.fixed {
   bottom: auto;
   left: 0px;
   position: fixed;
@@ -442,10 +444,57 @@ html {
   line-height: 60px;
   padding: 0 30px; }
 
-.header h1 {
-  font-size: 130px;
+#mobilenav {
+  display: none; }
+
+@media (max-width: 767px) {
+  #mobilenav, .header .fixed #mobilenav {
+    background-color: #fff;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    background-size: 164px 22px;
+    cursor: pointer;
+    display: block;
+    left: 0;
+    height: 50px;
+    width: 100%; }
+  #mobilenav span {
+    background: transparent url(images/menu.svg) center center no-repeat;
+    background-size: 19px 14px;
+    display: block;
+    float: right;
+    padding: 18px;
+    height: 14px;
+    width: 19px; } }
+
+.global-header .logo {
+  color: #FFF;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s; }
+
+.global-header .logo h1 {
+  /*
+    background-size: 192px 25px;*/
+  display: block;
+  height: 25px;
   line-height: 100%;
-  margin: 0px 0px 20px 0px; }
+  margin: 120px auto 25px auto;
+  font-size: 72px; }
+
+.global-header .description {
+  background-position: 50% 0px;
+  background-repeat: no-repeat;
+  margin: 30px auto 0px auto;
+  padding: 30px 0px 0px 0px;
+  max-width: 720px;
+  width: 100%; }
 
 .global-container .global-header #header-bg {
   -webkit-background-size: cover;
@@ -475,16 +524,16 @@ html {
   flex-grow: 1;
   justify-content: space-around;
   margin: 0 auto 24px;
-  max-width: 1200px;
+  max-width: 1400px;
   min-height: 100px;
   position: relative; }
 
 .insta-item {
+  padding: 6px;
   animation: slide-item .3s ease forwards;
   box-sizing: border-box;
   flex: 1 0 33%;
   transform: translateY(250px);
-  z-index: 2;
   /*@for $i from 1 through 10 {
         &:nth-child(# {
             $i
@@ -552,8 +601,15 @@ h2 {
     background: green;
 }*/
 /*contact*/
-.global-container section.contact {
-  background-color: yellow; }
+.global-container .contact {
+  background-color: yellow;
+  padding: 6rem 0; }
+
+section.contact .dual-col {
+  padding: 6rem 0; }
+
+section.contact .dual-col .col-1 h2 {
+  padding-left: 6rem; }
 
 /*FOOTER*/
 .gmap-wrapper {
@@ -565,7 +621,7 @@ h2 {
   display: block; }
 
 .global-footer {
-  padding: 8rem 0 6rem;
+  padding: 6rem 0 3rem;
   background: #ffdd30; }
 
 .footer p {
@@ -602,13 +658,38 @@ h2 {
 .dual-col .col-1 .h2 {
   padding-left: 0; }
 
+h2[data-number]:before {
+  content: attr(data-number); }
+
+h2:before {
+  color: #ffdd30;
+  position: absolute;
+  left: -6rem;
+  top: 0;
+  font-size: 3rem;
+  line-height: 4rem;
+  font-family: 'bold', sans-serif;
+  font-weight: normal;
+  font-style: normal; }
+
+.dual-col img {
+  width: 140%; }
+
+.dual-col .col-1:first-of-type img {
+  position: relative;
+  left: -40%;
+  width: 140%; }
+
 .wrap .dual-col .col-1 {
   width: 45%;
   padding-top: 0;
   padding-bottom: 0; }
 
-.wrap .dual-col .col:first-of-type {
+.wrap .dual-col .col-1:first-of-type {
   margin-right: 5%; }
+
+.wrap .dual-col .col-1:last-of-type {
+  margin-left: 4.5%; }
 
 /*ONE COLUMN*/
 .col-1 p {
@@ -619,3 +700,12 @@ h2 {
   font-family: 'regular', sans-serif;
   font-weight: normal;
   font-style: normal; }
+
+.row-2,
+.row-2 p {
+  max-width: 40rem;
+  margin: 3rem 0 6rem; }
+
+/*ARTISTS*/
+.dual-col .col-1 ul {
+  text-align: center; }
